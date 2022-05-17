@@ -81,13 +81,31 @@
     width: 122.02px;
     height: 120px;
     position: absolute;
-    left: 62px;
+    left: 50%;
+    transform: translateX(-50%);
     top: -71px;
 }
 .index_view_main_container_temperature {
     position: absolute;
     left: 18px;
     top: 103px;
+}
+.index_view_main_container_tags {
+    position: absolute;
+    right: 17px;
+    top: 128px;
+    width: 50px;
+    height: 16px;
+    background: rgba(106, 117, 186, 0.5);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Alegreya Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    color: #FFFFFF;
 }
 .index_view_main_container_temperature_value {
     font-family: 'Alegreya Sans';
@@ -110,6 +128,20 @@
     line-height: 17px;
     color: #332821;
 }
+.index_view_main_container_day {
+    position: absolute;
+    left: 18px;
+    top: 171px;
+    font-family: 'Alegreya Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: rgba(51, 40, 33, 0.5);
+}
+.index_view_main_container_day span {
+    font-size: 16px;
+}
 .index_view_main_container_location {
     text-align: center;
     font-family: 'Alegreya Sans';
@@ -124,7 +156,8 @@
     position: absolute;
     width: 163px;
     height: 47px;
-    left: 34px;
+    left: 50%;
+    transform: translateX(-50%);
     top: 229px;
     background: #5E4FC1;
     border-radius: 18px;

@@ -2,7 +2,8 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import {
   isNight,
-  isAfterNoon
+  getDay,
+  getTime
 } from '../../utils/tool';
 import { useNavigate } from 'react-router-dom';
 import './index.css';
@@ -46,6 +47,7 @@ const Index = () => {
       let {
         data
       } = response;
+      console.log(getTime())
       let weatherLives = data.lives[0];
       if (weatherLives.weather.indexOf('晴') != -1) {
         setWeatherIcon(isDay == 1 ? DaySun : NightMoon);
@@ -95,7 +97,13 @@ const Index = () => {
             <p className='index_view_main_container_location'>杭州市, 浙江省</p>
             <div className='index_view_main_container_temperature'>
               <div className='index_view_main_container_temperature_value'>{weather.temperature}</div>
-              <div className='index_view_main_container_day'>{weather.temperature}</div>
+            </div>
+            <div className='index_view_main_container_day'>
+              <span>{getDay()} </span>
+              {getTime()}
+            </div>
+            <div className='index_view_main_container_tags'>
+              {weather.weather}
             </div>
             <a className='index_view_main_container_detail' onClick={(e)=>navigate('/detail')}>详情</a>
           </div>

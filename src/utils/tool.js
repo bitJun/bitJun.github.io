@@ -9,17 +9,26 @@ export function isNight() {
     }
     return type;
 }
-export function isAfterNoon() {
-    let type;
+export function getDay() {
+    let weekDay = ["周日", "周一", "周二", "周三", "周四", "周五", "周六"];
     let date = new Date();
+    let type;
     if(date.getHours() >=0 && date.getHours() < 12) {
         type = 'am';
     }
     else{
         type = 'pm';
     }
-    return type;
+    return `${weekDay[date.getDay()]}`;
 }
 export function getTime() {
-    
+    let date = new Date();
+    let type;
+    if(date.getHours() >=0 && date.getHours() < 12) {
+        type = 'am';
+    }
+    else{
+        type = 'pm';
+    }
+    return `${date.getHours()} ${type}`;
 }
