@@ -1,0 +1,206 @@
+.index_view {
+    min-height: 812px;
+    height: 100vh;
+    background: linear-gradient(180deg, #E75481 -22.84%, #929CDE 113.36%);
+}
+.index_view_logo {
+    position: fixed;
+    left: 16px;
+    top: 49px;
+    width: 60px;
+    height: 60px;
+}
+.index_view_icon1 {
+    width: 7.98px;
+    height: 7.98px;
+    position: fixed;
+    left: 291.94px;
+    top: 10.48px;
+    background: #ffffff;
+    border-radius: 100px;
+}
+.index_view_icon2 {
+    width: 5px;
+    height: 5px;
+    position: fixed;
+    left: 227.73px;
+    top: 31.92px;
+    background: #ffffff;
+    border-radius: 100px;
+}
+.index_view_icon3 {
+    width: 5px;
+    height: 5px;
+    position: fixed;
+    right: 48.13px;
+    bottom: 210.11px;
+    background: #ffffff;
+    border-radius: 100px;
+}
+.index_view_icon4 {
+    width: 4px;
+    height: 4px;
+    position: fixed;
+    left: 57px;
+    bottom: 150px;
+    background: #ffffff;
+    border-radius: 100px;
+}
+.index_view_icon5 {
+    width: 11px;
+    height: 11px;
+    position: fixed;
+    left: 27px;
+    bottom: 109px;
+    background: #ffffff;
+    border-radius: 100px;
+}
+.index_view_icon6 {
+    width: 5px;
+    height: 5px;
+    position: fixed;
+    left: 94px;
+    bottom: 95px;
+    background: #ffffff;
+    border-radius: 100px;
+}
+.index_view_main {
+    padding: 292px 73px 0 72px;
+}
+.index_view_main_container {
+    height: 247px;
+    background: #ffffff;
+    box-shadow: 4px 0px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+    position: relative;
+    padding: 79px 17px 0 18px;
+    box-sizing: border-box;
+    position: relative;
+}
+.index_view_main_container_icon {
+    width: 122.02px;
+    height: 120px;
+    position: absolute;
+    left: 62px;
+    top: -71px;
+}
+.index_view_main_container_temperature {
+    position: absolute;
+    left: 18px;
+    top: 103px;
+}
+.index_view_main_container_temperature_value {
+    font-family: 'Alegreya Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 46px;
+    line-height: 77px;
+    color: #332821;
+    position: relative;
+}
+.index_view_main_container_temperature_value::after {
+    content: '°C';
+    position: absolute;
+    right: -15px;
+    top: 22px;
+    font-family: 'Alegreya Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #332821;
+}
+.index_view_main_container_location {
+    text-align: center;
+    font-family: 'Alegreya Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    height: 24px;
+    line-height: 24px;
+    color: #332821;
+}
+.index_view_main_container_detail {
+    position: absolute;
+    width: 163px;
+    height: 47px;
+    left: 34px;
+    top: 229px;
+    background: #5E4FC1;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Alegreya Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    color: #FFFFFF;
+}
+.index_view_main_detail {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.index_view_main_detail_item {
+    padding-left: 36px;
+    padding-right: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 24px;
+    margin-bottom: 11px;
+}
+.index_view_main_detail_item_l {
+    font-family: 'Alegreya Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+}
+.index_view_main_detail_item_icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+.index_view_main_detail_item_value {
+    font-family: 'Alegreya Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    color: #FFFFFF;
+}
+.index_view_navbar {
+    position: fixed;
+    width: 100%;
+    bottom: 0px;
+    padding: 0 16px 20px 16px;
+    box-sizing: border-box;
+}
+.index_view_navbar_main {
+    background: #FBFBFB;
+    height: 64px;
+    border-radius: 20px;
+    display: flex;
+    padding: 16px 34px 13px 34px;
+    box-sizing: border-box;
+}
+.index_view_navbar_main_item {
+    text-align: center;
+}
+.index_view_navbar_main_item_icon {
+    width: 24px;
+    height: 24px;
+}
+.index_view_navbar_main_item_text {
+    width: 30px;
+    height: 14px;
+    font-family: 'Alegreya Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+    color: #D86191;
+}

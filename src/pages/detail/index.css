@@ -1,0 +1,24 @@
+.detail_view {
+    background: #FFFFFF;
+    height: 100vh;
+}
+.detail_view_back {
+    width: 24px;
+    height: 24px;
+    position: fixed;
+    left: 20px;
+    top: 65px;
+}
+.detail_view_main {
+    padding-top: 130px;
+}
+.detail_view_main_city,
+.detail_view_main_province {
+    font-family: 'Alegreya Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+    color: #332821;
+    padding-left: 22px;
+}
