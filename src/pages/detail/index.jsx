@@ -30,7 +30,6 @@ const Detail = () => {
   const [weather, setWeather] = useState({});
   const [weatherIcon, setWeatherIcon] = useState('');
   const [futureWeather, setFutureWeather] = useState({});
-  const [isDay, setIsDay] = useState(isNight());
   const navigate = useNavigate();
   useEffect(() => {
     Init();
@@ -129,7 +128,7 @@ const Detail = () => {
       let {
         data
       } = response;
-      if (Number(data.status) == 1) {
+      if (Number(data.status) === 1) {
         setFutureWeather(data.forecasts[0]);
       }
     })
@@ -139,17 +138,18 @@ const Detail = () => {
   }
   const renderIcon = (dayweather) => {
     let Icon = null;
-    if (['晴', '多云', '风', '阴'].indexOf(dayweather) != -1) {
+    if (['晴', '多云', '风', '阴'].indexOf(dayweather) !== -1) {
       Icon = windIcon;
     }
-    if (dayweather.indexOf('雷') != -1) {
+    if (dayweather.indexOf('雷') !== -1) {
       Icon = stormIcon;
     }
-    if (dayweather.indexOf('雨') != -1 || dayweather.indexOf('雪') != -1) {
+    if (dayweather.indexOf('雨') !== -1 || dayweather.indexOf('雪') !== -1) {
       Icon = rainIcon;
     }
     return (
       <img
+        alt=''
         src={Icon}
         className='detail_view_featureList_item_icon'
       />
@@ -173,25 +173,25 @@ const Detail = () => {
       /**
        * 高德返回的天气对照表是中文的形式
        */
-      if (weatherLives.weather.indexOf('晴') != -1) {
-        setWeatherIcon(isDay == 1 ? DaySun : NightMoon);
+      if (weatherLives.weather.indexOf('晴') !== -1) {
+        setWeatherIcon(isNight() === 1 ? DaySun : NightMoon);
       }
-      if (weatherLives.weather.indexOf('云') != -1 || weatherLives.weather.indexOf('阴') != -1) {
-        setWeatherIcon(isDay == 1 ? DayClouds : NightClouds);
+      if (weatherLives.weather.indexOf('云') !== -1 || weatherLives.weather.indexOf('阴') !== -1) {
+        setWeatherIcon(isNight() === 1 ? DayClouds : NightClouds);
       }
-      if (weatherLives.weather.indexOf('风') != -1) {
-        setWeatherIcon(isDay == 1 ? DayWind : NightWind);
+      if (weatherLives.weather.indexOf('风') !== -1) {
+        setWeatherIcon(isNight() === 1 ? DayWind : NightWind);
       }
-      if (weatherLives.weather.indexOf('雷') != -1) {
-        setWeatherIcon(isDay == 1 ? DayStorm : NightStorm);
+      if (weatherLives.weather.indexOf('雷') !== -1) {
+        setWeatherIcon(isNight() === 1 ? DayStorm : NightStorm);
       }
-      if (weatherLives.weather.indexOf('雨') != -1) {
-        setWeatherIcon(isDay == 1 ? DayRain : NightRain);
+      if (weatherLives.weather.indexOf('雨') !== -1) {
+        setWeatherIcon(isNight() === 1 ? DayRain : NightRain);
       }
-      if (weatherLives.weather.indexOf('雪') != -1) {
-        setWeatherIcon(isDay == 1 ? DaySnow : NightSnow);
+      if (weatherLives.weather.indexOf('雪') !== -1) {
+        setWeatherIcon(isNight() === 1 ? DaySnow : NightSnow);
       }
-      if (Number(data.status) == 1) {
+      if (Number(data.status) === 1) {
         setWeather(data.lives[0]);
       }
     })
@@ -202,15 +202,19 @@ const Detail = () => {
   return (
     <div className='container'>
       <div className='detail_view'>
-        <img
-          src={back}
-          className='detail_view_back'
-          onClick={(e)=>navigate(-1)}
-        />
-        <img
-          className='detail_view_Icon'
-          src={weatherIcon}
-        />
+        <div className='detail_view_header'>
+          <img
+            alt=''
+            src={back}
+            className='detail_view_back'
+            onClick={(e)=>navigate(-1)}
+          />
+          <img
+            alt=''
+            className='detail_view_Icon'
+            src={weatherIcon}
+          />
+        </div>
         <div className='detail_view_main'>
           <div className='detail_view_main_city'>{weather.city || ''}</div>
           <div className='detail_view_main_province'>{weather.province || ''}</div>
@@ -222,6 +226,7 @@ const Detail = () => {
         <div className='detail_view_main_tags'>
           <div className='detail_view_main_tags_item'>
             <img
+              alt=''
               src={rainfall}
               className='detail_view_main_tags_item_icon'
             />
@@ -229,6 +234,7 @@ const Detail = () => {
           </div>
           <div className='detail_view_main_tags_item'>
             <img
+              alt=''
               src={humidity}
               className='detail_view_main_tags_item_icon'
             />
@@ -236,6 +242,7 @@ const Detail = () => {
           </div>
           <div className='detail_view_main_tags_item'>
             <img
+              alt=''
               src={windSpeed}
               className='detail_view_main_tags_item_icon'
             />

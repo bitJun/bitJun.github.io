@@ -2,23 +2,29 @@
     background: #FFFFFF;
     height: 100vh;
 }
+.detail_view_header {
+    padding: 39px 16px 0 20px;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+}
 .detail_view_back {
     width: 24px;
     height: 24px;
-    position: fixed;
+    /* position: fixed;
     left: 20px;
-    top: 65px;
+    top: 65px; */
 }
 .detail_view_Icon {
-    position: fixed;
+    /* position: fixed; */
     width: 100px;
     height: 100px;
-    top: 39px;
-    right: 16px;
+    /* top: 39px;
+    right: 16px; */
 }
 .detail_view_main {
-    padding-top: 130px;
     padding-left: 22px;
+    margin-top: -9px;
 }
 .detail_view_main_city,
 .detail_view_main_province {

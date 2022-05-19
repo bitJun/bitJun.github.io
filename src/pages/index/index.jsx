@@ -27,7 +27,6 @@ import NightWind from '../../images/NightWind.png';
 
 const Index = () => {
   const navigate = useNavigate();
-  const [isDay, setIsDay] = useState(isNight());
   const [weather, setWeather] = useState({});
   const [weatherIcon, setWeatherIcon] = useState('');
   useEffect(() => {
@@ -51,25 +50,25 @@ const Index = () => {
       /**
        * 高德返回的天气对照表是中文的形式
        */
-      if (weatherLives.weather.indexOf('晴') != -1) {
-        setWeatherIcon(isDay == 1 ? DaySun : NightMoon);
+      if (weatherLives.weather.indexOf('晴') !== -1) {
+        setWeatherIcon(isNight() === 1 ? DaySun : NightMoon);
       }
-      if (weatherLives.weather.indexOf('云') != -1 || weatherLives.weather.indexOf('阴') != -1) {
-        setWeatherIcon(isDay == 1 ? DayClouds : NightClouds);
+      if (weatherLives.weather.indexOf('云') !== -1 || weatherLives.weather.indexOf('阴') !== -1) {
+        setWeatherIcon(isNight() === 1 ? DayClouds : NightClouds);
       }
-      if (weatherLives.weather.indexOf('风') != -1) {
-        setWeatherIcon(isDay == 1 ? DayWind : NightWind);
+      if (weatherLives.weather.indexOf('风') !== -1) {
+        setWeatherIcon(isNight() === 1 ? DayWind : NightWind);
       }
-      if (weatherLives.weather.indexOf('雷') != -1) {
-        setWeatherIcon(isDay == 1 ? DayStorm : NightStorm);
+      if (weatherLives.weather.indexOf('雷') !== -1) {
+        setWeatherIcon(isNight() === 1 ? DayStorm : NightStorm);
       }
-      if (weatherLives.weather.indexOf('雨') != -1) {
-        setWeatherIcon(isDay == 1 ? DayRain : NightRain);
+      if (weatherLives.weather.indexOf('雨') !== -1) {
+        setWeatherIcon(isNight() === 1 ? DayRain : NightRain);
       }
-      if (weatherLives.weather.indexOf('雪') != -1) {
-        setWeatherIcon(isDay == 1 ? DaySnow : NightSnow);
+      if (weatherLives.weather.indexOf('雪') !== -1) {
+        setWeatherIcon(isNight() === 1 ? DaySnow : NightSnow);
       }
-      if (Number(data.status) == 1) {
+      if (Number(data.status) === 1) {
         setWeather(data.lives[0]);
       }
     })
@@ -81,6 +80,7 @@ const Index = () => {
     <div className='container'>
       <div className='index_view'>
         <img
+          alt=''
           src={logo}
           className='index_view_logo'
         />
@@ -93,6 +93,7 @@ const Index = () => {
         <div className='index_view_main'>
           <div className='index_view_main_container'>
             <img
+              alt=''
               src={weatherIcon}
               className='index_view_main_container_icon'
             />
@@ -107,12 +108,13 @@ const Index = () => {
             <div className='index_view_main_container_tags'>
               {weather.weather}
             </div>
-            <a className='index_view_main_container_detail' onClick={(e)=>navigate('/detail')}>详情</a>
+            <div className='index_view_main_container_detail' onClick={(e)=>navigate('/detail')}>详情</div>
           </div>
           <div className='index_view_main_detail'>
             <div className='index_view_main_detail_item'>
               <div className='index_view_main_detail_item_l'>
                 <img
+                  alt=''
                   src={rainfall}
                   className='index_view_main_detail_item_icon'
                 />
@@ -123,6 +125,7 @@ const Index = () => {
             <div className='index_view_main_detail_item'>
               <div className='index_view_main_detail_item_l'>
                 <img
+                  alt=''
                   src={humidity}
                   className='index_view_main_detail_item_icon'
                 />
@@ -133,6 +136,7 @@ const Index = () => {
             <div className='index_view_main_detail_item'>
               <div className='index_view_main_detail_item_l'>
                 <img
+                  alt=''
                   src={windSpeed}
                   className='index_view_main_detail_item_icon'
                 />
@@ -147,6 +151,7 @@ const Index = () => {
         <div className='index_view_navbar_main'>
           <div className='index_view_navbar_main_item'>
             <img
+              alt=''
               src={home}
               className='index_view_navbar_main_item_icon'
             />
