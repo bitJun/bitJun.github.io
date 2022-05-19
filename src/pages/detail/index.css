@@ -9,8 +9,16 @@
     left: 20px;
     top: 65px;
 }
+.detail_view_Icon {
+    position: fixed;
+    width: 100px;
+    height: 100px;
+    top: 39px;
+    right: 16px;
+}
 .detail_view_main {
     padding-top: 130px;
+    padding-left: 22px;
 }
 .detail_view_main_city,
 .detail_view_main_province {
@@ -20,5 +28,148 @@
     font-size: 30px;
     line-height: 36px;
     color: #332821;
-    padding-left: 22px;
 }
+.detail_view_main_temp {
+    height: 115px;
+    display: flex;
+    align-items: flex-start;
+    font-family: 'Alegreya Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 96px;
+    color: #332821;
+    position: relative;
+}
+.detail_view_main_temp span {
+    margin-top: 30px;
+    width: 20px;
+    height: 29px;
+    font-family: 'Alegreya Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: #332821;
+}
+.detail_view_main_tags {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 22px;
+    margin-bottom: 20px;
+}
+.detail_view_main_tags_item {
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Alegreya Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 0 8.5px 0 15px;
+} 
+.detail_view_main_tags_item:first-child {
+    /* width: 78px; */
+    background: rgba(101, 142, 217, 0.1);
+    color: #658ED9;
+}
+.detail_view_main_tags_item:nth-child(2n) {
+    /* width: 80px; */
+    background: rgba(216, 97, 145, 0.1);
+    color: #D86191;
+}
+.detail_view_main_tags_item:nth-child(3) {
+    /* width: 94px; */
+    background: rgba(94, 79, 193, 0.1);
+    color: #5E4FC1;
+}
+.detail_view_main_tags_item_icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 5px;
+}
+.detail_view_title {
+    padding-left: 20px;
+    height: 22px;
+    font-family: 'Alegreya Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #332821;
+    margin-bottom: 11px;
+}
+.detail_view_featureList {
+
+}
+.detail_view_featureList_item {
+    display: flex;
+    height: 50px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+.detail_view_featureList_item_week {
+    width: 36px;
+    font-family: 'Alegreya Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    color: #332821;
+    /* margin-right: 106px; */
+}
+.detail_view_featureList_item_icon {
+    width: 50px;
+    height: 50px;
+}
+.detail_view_featureList_item_temp {
+    display: flex;
+    align-items: center;
+    /* margin-right: 87px; */
+}
+.detail_view_featureList_item_temp_day,
+.detail_view_featureList_item_temp_night {
+    display: flex;
+    align-items: flex-start;
+}
+.detail_view_featureList_item_temp_day {
+    margin-right: 18px;
+}
+.detail_view_featureList_item_temp_day p,
+.detail_view_featureList_item_temp_night p {
+    font-family: 'Alegreya Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    height: 22px;
+    color: #332821;
+    margin-right: 2px;
+}
+.detail_view_featureList_item_temp_day span,
+.detail_view_featureList_item_temp_night span {
+    font-family: 'Alegreya Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    color: #332821;
+}
+.detail_view_featureList_item_temp_night p,
+.detail_view_featureList_item_temp_night span {
+    color: rgba(51, 40, 33, 0.5);
+}
+/* .detail_view_featureList_item_temp_day::after,
+.detail_view_featureList_item_temp_night::after {
+    content: '°C';
+    right: -5px;
+    top: 0;
+    font-family: 'Alegreya Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    color: #332821;
+}
+.detail_view_featureList_item_temp_night::after {
+    color: rgba(51, 40, 33, 0.5);
+} */

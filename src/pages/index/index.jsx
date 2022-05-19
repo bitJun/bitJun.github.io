@@ -34,7 +34,7 @@ const Index = () => {
     Init();
   }, []);
   /**
-   * 初始化数据
+   * 获取今天的天气预报数据
    */
   const Init = () => {
     let params = {
@@ -43,16 +43,18 @@ const Index = () => {
     }
     axios.get('https://restapi.amap.com/v3/weather/weatherInfo?parameters', {
       params
-    }).then(function (response) {
+    }).then(res=>{
       let {
         data
-      } = response;
-      console.log(getTime())
+      } = res;
       let weatherLives = data.lives[0];
+      /**
+       * 高德返回的天气对照表是中文的形式
+       */
       if (weatherLives.weather.indexOf('晴') != -1) {
         setWeatherIcon(isDay == 1 ? DaySun : NightMoon);
       }
-      if (weatherLives.weather.indexOf('云') != -1) {
+      if (weatherLives.weather.indexOf('云') != -1 || weatherLives.weather.indexOf('阴') != -1) {
         setWeatherIcon(isDay == 1 ? DayClouds : NightClouds);
       }
       if (weatherLives.weather.indexOf('风') != -1) {
@@ -71,8 +73,8 @@ const Index = () => {
         setWeather(data.lives[0]);
       }
     })
-    .catch(function (error) {
-      console.log(error);
+    .catch(err=>{
+      console.log(err);
     });
   }
   return (
