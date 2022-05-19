@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.83596e48.css",
-    "main.js": "/static/js/main.3921fa6a.js",
+    "main.css": "/static/css/main.6ddd816c.css",
+    "main.js": "/static/js/main.655eb144.js",
     "static/js/787.13d76ca7.chunk.js": "/static/js/787.13d76ca7.chunk.js",
     "static/media/DaySnow.png": "/static/media/DaySnow.0e87f2a723f0d9e8debf.png",
     "static/media/DayWind.png": "/static/media/DayWind.927504add5ef62d76e9a.png",
@@ -16,14 +16,19 @@
     "static/media/NightRain.png": "/static/media/NightRain.74a8d4d04b8ccd213177.png",
     "static/media/NightMoon.png": "/static/media/NightMoon.0f49e4822b9e07f0569a.png",
     "static/media/logo.png": "/static/media/logo.01b58f36c958d3ec5dab.png",
+    "static/media/windIcon.png": "/static/media/windIcon.d1d44301b09a00546b1e.png",
+    "static/media/stormIcon.png": "/static/media/stormIcon.946f097bfc008cc3409e.png",
+    "static/media/rainIcon.png": "/static/media/rainIcon.f9d502cbd3acfc63053b.png",
+    "static/media/windSpeedIcon.png": "/static/media/windSpeedIcon.aedba81e554af4b553db.png",
+    "static/media/rainfallIcon.png": "/static/media/rainfallIcon.554349bb459f31ff2ff7.png",
     "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/index.html",
-    "main.83596e48.css.map": "/static/css/main.83596e48.css.map",
-    "main.3921fa6a.js.map": "/static/js/main.3921fa6a.js.map",
+    "main.6ddd816c.css.map": "/static/css/main.6ddd816c.css.map",
+    "main.655eb144.js.map": "/static/js/main.655eb144.js.map",
     "787.13d76ca7.chunk.js.map": "/static/js/787.13d76ca7.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.83596e48.css",
-    "static/js/main.3921fa6a.js"
+    "static/css/main.6ddd816c.css",
+    "static/js/main.655eb144.js"
   ]
 }
